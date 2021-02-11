@@ -7,15 +7,37 @@
 //
 
 import UIKit
+import Charts
 
-class StatisticsVC: UIViewController {
+class StatisticsVC: UIViewController, ChartViewDelegate {
 
+    var barChart = BarChartView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        barChart.delegate = self
+        print(0)
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        barChart.frame = CGRect(x: 0, y: self.view.frame.size.height/2.25, width: self.view.frame.size.width, height: self.view.frame.size.height/2)
+        
+        view.addSubview(barChart)
+        
+        var entries = [BarChartDataEntry]()
+        
+        for i in 0..<10 {
+            entries.append(BarChartDataEntry(x: Double(i), y: Double(i)))
+        }
+        
+        let set = BarChartDataSet(entries: entries)
+        set.colors = ChartColorTemplates.joyful()
+        
+        let data = BarChartData(dataSet: set)
+        barChart.data = data
+    }
 
     /*
     // MARK: - Navigation

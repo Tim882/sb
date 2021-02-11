@@ -16,10 +16,10 @@ class EmergencyVC: UIViewController {
     
     @IBAction func callButton(_ sender: Any) {
         if (emergencyCalled) {
-            self.callButton.setTitle("Вызвать скорую", for: .normal)
+            self.callButton.setTitle("SOS", for: .normal)
         }
         else {
-            self.callButton.setTitle("Отменить вызов", for: .normal)
+            self.callButton.setTitle("Отменить", for: .normal)
         }
         
         emergencyCalled = !emergencyCalled
