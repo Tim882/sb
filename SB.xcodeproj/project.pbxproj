@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		053F2AB908C8B6FB24F49B16 /* Pods_SB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15577D0F43831FCD52D2CC26 /* Pods_SB.framework */; };
+		3919721925D808130041D0BA /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3919721825D808130041D0BA /* EditProfileVC.swift */; };
+		392BDD6D25DA7B6500E30F0A /* AddContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392BDD6C25DA7B6500E30F0A /* AddContactVC.swift */; };
 		39AA758B25C474310030999E /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AA758A25C474310030999E /* UserVC.swift */; };
 		39AA758D25C474670030999E /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AA758C25C474670030999E /* StatisticsVC.swift */; };
 		39AA758F25C4747F0030999E /* EmergencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39AA758E25C4747F0030999E /* EmergencyVC.swift */; };
@@ -45,6 +47,8 @@
 		1DF5B2036059DA573BF19C3B /* Pods-SB-SBUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SB-SBUITests.debug.xcconfig"; path = "Target Support Files/Pods-SB-SBUITests/Pods-SB-SBUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		27D32C5F23710CB117779D74 /* Pods-SBTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SBTests.release.xcconfig"; path = "Target Support Files/Pods-SBTests/Pods-SBTests.release.xcconfig"; sourceTree = "<group>"; };
 		32004C255A769D279CF3AAE2 /* Pods-SB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SB.debug.xcconfig"; path = "Target Support Files/Pods-SB/Pods-SB.debug.xcconfig"; sourceTree = "<group>"; };
+		3919721825D808130041D0BA /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		392BDD6C25DA7B6500E30F0A /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
 		39AA758A25C474310030999E /* UserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
 		39AA758C25C474670030999E /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		39AA758E25C4747F0030999E /* EmergencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmergencyVC.swift; sourceTree = "<group>"; };
@@ -127,6 +131,8 @@
 				39AA758A25C474310030999E /* UserVC.swift */,
 				39AA758C25C474670030999E /* StatisticsVC.swift */,
 				39AA758E25C4747F0030999E /* EmergencyVC.swift */,
+				3919721825D808130041D0BA /* EditProfileVC.swift */,
+				392BDD6C25DA7B6500E30F0A /* AddContactVC.swift */,
 				39EB1BFB25A080CA00E3F1EC /* Main.storyboard */,
 				39EB1C0125A080CB00E3F1EC /* Assets.xcassets */,
 				39EB1C0325A080CB00E3F1EC /* LaunchScreen.storyboard */,
@@ -174,7 +180,6 @@
 				FEE3D63C79C143E54A8E292E /* Pods-SBTests.debug.xcconfig */,
 				27D32C5F23710CB117779D74 /* Pods-SBTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -420,7 +425,9 @@
 				39AA758F25C4747F0030999E /* EmergencyVC.swift in Sources */,
 				39EB1C0025A080CA00E3F1EC /* SB.xcdatamodeld in Sources */,
 				39AA758B25C474310030999E /* UserVC.swift in Sources */,
+				392BDD6D25DA7B6500E30F0A /* AddContactVC.swift in Sources */,
 				39EB1BF625A080CA00E3F1EC /* AppDelegate.swift in Sources */,
+				3919721925D808130041D0BA /* EditProfileVC.swift in Sources */,
 				39EB1BF825A080CA00E3F1EC /* SceneDelegate.swift in Sources */,
 				39AA758D25C474670030999E /* StatisticsVC.swift in Sources */,
 			);
