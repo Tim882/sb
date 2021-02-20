@@ -13,6 +13,7 @@ class EditProfileVC: UIViewController {
     var nameString = ""
     var ageString = ""
     var diagnosisString = ""
+    var surnameString = ""
     
     var diagnosisArray = ["Диагноз 1", "Диагноз 2", "Диагноз 3"]
     
@@ -20,11 +21,14 @@ class EditProfileVC: UIViewController {
     
     @IBOutlet weak var diagnosisPickerView: UIPickerView!
     @IBOutlet weak var ageTextField: UITextField!
+    @IBOutlet weak var surnameTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBAction func saveProfile(_ sender: UIButton) {
         nameString = "Имя: " + nameTextField.text!
         ageString = "Возраст: " + ageTextField.text!
-        delegate?.update(name: nameString, age: ageString)
+        diagnosisString = "Диагноз: " + diagnosisString
+        surnameString = "Фамилия: " + surnameTextField.text!
+        delegate?.update(name: nameString, surname: surnameString, age: ageString, diagnosis: diagnosisString)
     }
     
     override func viewDidLoad() {
@@ -63,6 +67,5 @@ extension EditProfileVC: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         diagnosisString = diagnosisArray[row]
-        print(diagnosisString)
     }
 }

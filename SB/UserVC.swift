@@ -9,11 +9,13 @@
 import UIKit
 
 protocol UserVCDelegate: class {
-    func update(name: String, age: String)
+    func update(name: String, surname: String, age: String, diagnosis: String)
 }
 
 class UserVC: UIViewController, UserVCDelegate {
     
+    @IBOutlet weak var surnameLabel: UILabel!
+    @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var diagnosisLabel: UILabel!
@@ -26,9 +28,11 @@ class UserVC: UIViewController, UserVCDelegate {
         destination.delegate = self
     }
     
-    func update(name: String, age: String) {
+    func update(name: String, surname: String, age: String, diagnosis: String) {
         ageLabel.text = age
         nameLabel.text = name
+        surnameLabel.text = surname
+        diagnosisLabel.text = diagnosis
     }
     
     let cellIdentifier = "contactCell"
@@ -37,7 +41,9 @@ class UserVC: UIViewController, UserVCDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        idLabel.text = "id: 111111"
+        
         contactNameArray.append("Some name")
         contactNumberArray.append("777-77-77")
     }
