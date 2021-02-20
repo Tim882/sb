@@ -9,7 +9,8 @@
 import UIKit
 
 protocol UserVCDelegate: class {
-    func update(name: String, surname: String, age: String, diagnosis: String)
+    func update_profile(name: String, surname: String, age: String, diagnosis: String)
+    func update_contacts_table(name: String, number: String)
 }
 
 class UserVC: UIViewController, UserVCDelegate {
@@ -22,17 +23,28 @@ class UserVC: UIViewController, UserVCDelegate {
     @IBOutlet weak var contactsTable: UITableView!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destination = segue.destination as? EditProfileVC else {
+        if let destination = segue.destination as? EditProfileVC {
+            destination.delegate = self
+        }
+        else if let destination = segue.destination as? AddContactVC {
+            destination.delegate = self
+        }
+        else {
             return
         }
-        destination.delegate = self
     }
     
-    func update(name: String, surname: String, age: String, diagnosis: String) {
+    func update_profile(name: String, surname: String, age: String, diagnosis: String) {
         ageLabel.text = age
         nameLabel.text = name
         surnameLabel.text = surname
         diagnosisLabel.text = diagnosis
+    }
+    
+    func update_contacts_table(name: String, number: String) {
+        contactNameArray.append(name)
+        contactNumberArray.append(number)
+        self.contactsTable.reloadData()
     }
     
     let cellIdentifier = "contactCell"

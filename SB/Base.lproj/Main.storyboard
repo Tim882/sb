@@ -103,7 +103,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Профиль" id="gm2-s5-HgK">
                             <connections>
                                 <action selector="saveProfileData:" destination="QYq-A9-vgi" id="WaL-M7-OdT"/>
-                                <segue destination="ltu-Uy-QX4" kind="show" id="QOL-By-T4C"/>
+                                <segue destination="ltu-Uy-QX4" kind="presentation" id="mpd-yd-MUD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -125,7 +125,7 @@
             <objects>
                 <viewController id="ltu-Uy-QX4" customClass="EditProfileVC" customModule="SB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kb3-gp-f1r">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Имя" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SqB-Xd-dod">
@@ -243,6 +243,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Сохранить"/>
                                 <connections>
+                                    <action selector="saveButton:" destination="5Lw-pJ-dVr" eventType="touchUpInside" id="SZG-Fu-GzD"/>
                                     <action selector="saveProfile:" destination="ltu-Uy-QX4" eventType="touchUpInside" id="YDm-s5-bpb"/>
                                 </connections>
                             </button>
@@ -251,6 +252,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="fyV-er-kUz"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="HXX-Gy-Xxf" id="66n-hk-J5S"/>
+                        <outlet property="numberTextField" destination="jKn-Xb-unO" id="aOS-g4-tR1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b9H-K6-wqr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

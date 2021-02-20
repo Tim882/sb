@@ -28,27 +28,20 @@ class EditProfileVC: UIViewController {
         ageString = "Возраст: " + ageTextField.text!
         diagnosisString = "Диагноз: " + diagnosisString
         surnameString = "Фамилия: " + surnameTextField.text!
-        delegate?.update(name: nameString, surname: surnameString, age: ageString, diagnosis: diagnosisString)
+        delegate?.update_profile(name: nameString, surname: surnameString, age: ageString, diagnosis: diagnosisString)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if diagnosisArray.count > 0 {
+            diagnosisString = diagnosisArray[0]
+        }
 
         diagnosisPickerView.dataSource = self
         diagnosisPickerView.delegate = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension EditProfileVC: UIPickerViewDataSource, UIPickerViewDelegate {
